@@ -1,0 +1,14 @@
+---
+resources:
+- name: repo
+  type: git
+  source:
+    uri: https://github.com/cdelashmutt-pivotal/webdriverio-pipeline
+    branch: master
+
+jobs:
+- name: webdriver
+  plan:
+  - get: repo
+  - task: run-ui-tests
+    file: repo/ci/run-ui-tests.yml
