@@ -12,3 +12,6 @@ jobs:
   - get: repo
   - task: run-ui-tests
     file: repo/ci/run-ui-tests.yml
+    params:
+      BASE_URL: http://www.google.com
+
