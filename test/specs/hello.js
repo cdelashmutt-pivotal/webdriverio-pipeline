@@ -10,6 +10,7 @@ describe("A suite is just a function", function() {
 
 describe("Google", function() {
   it("page title should be Google", function() {
-    expect(browser.get("/").getTitle()).toBe("Google");
+    browser.url('/');
+    expect(browser.getTitle()).toBe("Google");
   });
 });
